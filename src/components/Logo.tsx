@@ -26,16 +26,16 @@ export const Logo = ({ className, size = 32 }: LogoProps) => {
     >
       <defs>
         <linearGradient id={gradId} x1="8" y1="8" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="hsl(217 91% 60%)" />
-          <stop offset="55%" stopColor="hsl(258 90% 66%)" />
-          <stop offset="100%" stopColor="hsl(189 94% 53%)" />
+          <stop offset="0%" stopColor="hsl(189 94% 60%)" />
+          <stop offset="50%" stopColor="hsl(217 91% 75%)" />
+          <stop offset="100%" stopColor="hsl(258 90% 80%)" />
         </linearGradient>
         <linearGradient id={ringId} x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="hsl(217 91% 70%)" stopOpacity="1" />
           <stop offset="100%" stopColor="hsl(258 90% 75%)" stopOpacity="0.85" />
         </linearGradient>
         <radialGradient id={glowId} cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="hsl(217 91% 60%)" stopOpacity="0.45" />
+          <stop offset="0%" stopColor="hsl(217 91% 75%)" stopOpacity="0.6" />
           <stop offset="100%" stopColor="hsl(217 91% 60%)" stopOpacity="0" />
         </radialGradient>
       </defs>
@@ -55,8 +55,8 @@ export const Logo = ({ className, size = 32 }: LogoProps) => {
       <circle cx="6" cy="34" r="1.6" fill="hsl(258 90% 66%)" />
       <circle cx="24" cy="4.5" r="1.4" fill="hsl(217 91% 60%)" />
 
-      {/* Geometric "N" at the core */}
-      <g stroke={`url(#${gradId})`} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none">
+      {/* Geometric "N" at the core — bright white/cyan to pop against orbits */}
+      <g stroke="hsl(195 100% 85%)" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
         {/* Left vertical */}
         <line x1="15" y1="34" x2="15" y2="14" />
         {/* Diagonal */}
@@ -65,10 +65,10 @@ export const Logo = ({ className, size = 32 }: LogoProps) => {
         <line x1="33" y1="14" x2="33" y2="34" />
       </g>
 
-      {/* Core nodes on the N */}
-      <circle cx="15" cy="14" r="2" fill="hsl(217 91% 60%)" />
-      <circle cx="33" cy="34" r="2" fill="hsl(258 90% 66%)" />
-      <circle cx="24" cy="24" r="1.6" fill="hsl(189 94% 53%)" />
+      {/* Core nodes on the N — brighter */}
+      <circle cx="15" cy="14" r="2.4" fill="hsl(195 100% 90%)" />
+      <circle cx="33" cy="34" r="2.4" fill="hsl(195 100% 90%)" />
+      <circle cx="24" cy="24" r="2" fill="hsl(195 100% 85%)" />
     </svg>
   );
 };
