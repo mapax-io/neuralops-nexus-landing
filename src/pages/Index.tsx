@@ -19,6 +19,7 @@ const Index = () => {
         <Market />
         <BusinessModel />
         <ProductStatus />
+        <GoToMarket />
       </main>
       <Footer />
     </div>
