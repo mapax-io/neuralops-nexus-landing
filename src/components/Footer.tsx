@@ -2,20 +2,8 @@ import { LogoLockup } from "./Logo";
 
 const cols = [
   {
-    title: "Product",
-    links: ["Features", "How it works", "Use cases", "Pricing", "Changelog"],
-  },
-  {
-    title: "Developers",
-    links: ["Documentation", "GitHub", "API reference", "Integrations", "Status"],
-  },
-  {
     title: "Company",
-    links: ["About", "Careers", "Blog", "Press", "Contact"],
-  },
-  {
-    title: "Legal",
-    links: ["Privacy", "Terms", "Security", "DPA"],
+    links: ["About us", "Contact us"],
   },
 ];
 
