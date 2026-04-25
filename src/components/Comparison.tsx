@@ -1,5 +1,4 @@
-import { Check, Minus, Sparkles } from "lucide-react";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Sparkles } from "lucide-react";
 
 const columns: { key: "chatgpt" | "librechat" | "neuralops"; label: string; sub: string; highlight?: boolean }[] = [
   { key: "chatgpt", label: "ChatGPT / Claude (Teams)", sub: "Productivity layer" },
@@ -91,7 +90,7 @@ const rows: Row[] = [
 
 export const Comparison = () => {
   return (
-    <section className="relative py-20 md:py-28">
+    <section className="relative py-16 md:py-24">
       <div className="container-narrow">
         <div className="mx-auto max-w-3xl text-center">
           <span className="text-xs font-medium uppercase tracking-[0.2em] text-primary">Platform Comparison</span>
@@ -99,94 +98,62 @@ export const Comparison = () => {
             How NeuralOps Nexus <span className="text-gradient-brand">compares</span>
           </h1>
           <p className="mt-5 text-lg text-muted-foreground">
-            A side-by-side look at how NeuralOps Nexus differs from leading AI assistant platforms and open chat
-            frameworks.
+            A side-by-side view across leading AI assistant platforms and open chat frameworks.
           </p>
         </div>
 
-        {/* Desktop / tablet table */}
-        <div className="surface-card mt-14 hidden overflow-hidden rounded-2xl md:block">
-          <Table>
-            <TableHeader>
-              <TableRow className="border-hairline/60 hover:bg-transparent">
-                <TableHead className="w-[200px] bg-muted/30 text-foreground">Category</TableHead>
-                {columns.map((col) => (
-                  <TableHead
-                    key={col.key}
-                    className={
-                      col.highlight
-                        ? "bg-gradient-brand/10 text-foreground"
-                        : "text-foreground"
-                    }
-                  >
-                    <div className="flex flex-col gap-1 py-2">
-                      <span className="flex items-center gap-2 text-sm font-semibold">
-                        {col.highlight && <Sparkles className="h-3.5 w-3.5 text-primary" />}
-                        {col.label}
-                      </span>
-                      <span className="text-[11px] font-normal uppercase tracking-wider text-muted-foreground">
-                        {col.sub}
-                      </span>
-                    </div>
-                  </TableHead>
-                ))}
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {rows.map((row) => (
-                <TableRow key={row.category} className="border-hairline/40">
-                  <TableCell className="bg-muted/20 align-top text-sm font-medium text-foreground">
-                    {row.category}
-                  </TableCell>
-                  <TableCell className="align-top text-sm text-muted-foreground">{row.chatgpt}</TableCell>
-                  <TableCell className="align-top text-sm text-muted-foreground">{row.librechat}</TableCell>
-                  <TableCell className="bg-gradient-brand/[0.06] align-top text-sm text-foreground">
-                    <div className="flex items-start gap-2">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                      <span>{row.neuralops}</span>
-                    </div>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-
-        {/* Mobile stacked cards */}
-        <div className="mt-12 grid gap-4 md:hidden">
-          {rows.map((row) => (
-            <div key={row.category} className="surface-card rounded-2xl p-5">
-              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">{row.category}</div>
-              <div className="mt-4 space-y-3">
-                {columns.map((col) => (
-                  <div
-                    key={col.key}
-                    className={`rounded-lg border border-hairline/50 p-3 ${
-                      col.highlight ? "bg-gradient-brand/[0.08]" : "bg-muted/20"
-                    }`}
-                  >
-                    <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
-                      {col.highlight && <Sparkles className="h-3 w-3 text-primary" />}
-                      {col.label}
-                    </div>
-                    <div
-                      className={`mt-1.5 flex items-start gap-2 text-sm ${
-                        col.highlight ? "text-foreground" : "text-muted-foreground"
+        <div className="surface-card mt-12 overflow-hidden rounded-2xl">
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[760px] border-collapse text-left">
+              <thead>
+                <tr className="border-b border-hairline/60">
+                  <th className="w-[200px] bg-muted/30 px-5 py-4 align-bottom text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                    Category
+                  </th>
+                  {columns.map((col) => (
+                    <th
+                      key={col.key}
+                      className={`px-5 py-4 align-bottom ${
+                        col.highlight ? "bg-gradient-brand/10" : ""
                       }`}
                     >
-                      {col.highlight ? (
-                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                      ) : (
-                        <Minus className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground/60" />
-                      )}
-                      <span>{row[col.key]}</span>
-                    </div>
-                  </div>
+                      <div className="flex flex-col gap-1">
+                        <span className="flex items-center gap-2 text-sm font-semibold text-foreground">
+                          {col.highlight && <Sparkles className="h-3.5 w-3.5 text-primary" />}
+                          {col.label}
+                        </span>
+                        <span className="text-[11px] font-normal uppercase tracking-wider text-muted-foreground">
+                          {col.sub}
+                        </span>
+                      </div>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((row) => (
+                  <tr
+                    key={row.category}
+                    className="border-b border-hairline/40 last:border-0 transition-colors hover:bg-muted/10"
+                  >
+                    <td className="bg-muted/20 px-5 py-4 align-top text-sm font-medium text-foreground">
+                      {row.category}
+                    </td>
+                    <td className="px-5 py-4 align-top text-sm text-muted-foreground">{row.chatgpt}</td>
+                    <td className="px-5 py-4 align-top text-sm text-muted-foreground">{row.librechat}</td>
+                    <td className="bg-gradient-brand/[0.06] px-5 py-4 align-top text-sm text-foreground">
+                      {row.neuralops}
+                    </td>
+                  </tr>
                 ))}
-              </div>
-            </div>
-          ))}
+              </tbody>
+            </table>
+          </div>
         </div>
+
+        <p className="mt-6 text-center text-xs text-muted-foreground">
+          Tip: scroll horizontally on smaller screens to view the full table.
+        </p>
       </div>
     </section>
   );
