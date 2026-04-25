@@ -34,12 +34,16 @@ export const OpenSource = () => {
                 or let us run it for you with enterprise features and support.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button variant="brand" size="lg">
-                  <Github className="h-4 w-4" />
-                  Star on GitHub
+                <Button variant="brand" size="lg" asChild>
+                  <a href={GITHUB_URL} target="_blank" rel="noreferrer noopener">
+                    <Github className="h-4 w-4" />
+                    Star on GitHub
+                  </a>
                 </Button>
-                <Button variant="glass" size="lg">
-                  Read the docs
+                <Button variant="glass" size="lg" asChild>
+                  <a href={GITHUB_URL} target="_blank" rel="noreferrer noopener">
+                    Browse the repo
+                  </a>
                 </Button>
               </div>
             </div>
