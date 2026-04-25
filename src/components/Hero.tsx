@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Github } from "lucide-react";
 import { Logo } from "./Logo";
+
+const GITHUB_URL = "https://github.com/mapax-io/neuralops-nexus-backend";
 
 export const Hero = () => {
   return (
