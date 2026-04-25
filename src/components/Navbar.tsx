@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { LogoLockup } from "./Logo";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github } from "lucide-react";
+
+const GITHUB_URL = "https://github.com/mapax-io/neuralops-nexus-backend";
 
 const navItems = [
   { label: "Product", href: "#solution" },
