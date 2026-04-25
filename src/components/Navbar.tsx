@@ -6,11 +6,12 @@ import { Menu, X, Github } from "lucide-react";
 const GITHUB_URL = "https://github.com/mapax-io/neuralops-nexus-backend";
 
 const navItems = [
-  { label: "Product", href: "#solution" },
   { label: "Features", href: "#features" },
-  { label: "How it works", href: "#how" },
-  { label: "Use cases", href: "#use-cases" },
-  { label: "Open source", href: "#open-source" },
+  { label: "Comparison Table", href: "#comparison" },
+  { label: "Market", href: "#market" },
+  { label: "Business Model", href: "#business-model" },
+  { label: "Opensource Model", href: "#open-source" },
+  { label: "Competition", href: "#competition" },
 ];
 
 export const Navbar = () => {
