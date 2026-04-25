@@ -37,14 +37,18 @@ export const Navbar = () => {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
+          <span className="inline-flex items-center gap-2 rounded-full border border-hairline/60 bg-muted/40 px-3 py-1 text-xs text-muted-foreground">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary/60 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+            </span>
+            MVP in development
+          </span>
           <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground" asChild>
             <a href={GITHUB_URL} target="_blank" rel="noreferrer noopener" aria-label="GitHub repository">
               <Github className="h-4 w-4" />
               GitHub
             </a>
-          </Button>
-          <Button variant="brand" size="sm">
-            Get early access
           </Button>
         </div>
 
@@ -72,13 +76,19 @@ export const Navbar = () => {
               </a>
             ))}
             <div className="mt-2 flex flex-col gap-2 px-3">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-hairline/60 bg-muted/40 px-3 py-1 text-xs text-muted-foreground">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary/60 opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+                </span>
+                MVP in development
+              </span>
               <Button variant="ghost" size="sm" asChild>
                 <a href={GITHUB_URL} target="_blank" rel="noreferrer noopener">
                   <Github className="h-4 w-4" />
                   GitHub
                 </a>
               </Button>
-              <Button variant="brand" size="sm">Get early access</Button>
             </div>
           </div>
         </div>
