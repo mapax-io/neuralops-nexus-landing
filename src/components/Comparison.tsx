@@ -1,11 +1,11 @@
 import { Check, Minus, Sparkles } from "lucide-react";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
-const columns = [
+const columns: { key: "chatgpt" | "librechat" | "neuralops"; label: string; sub: string; highlight?: boolean }[] = [
   { key: "chatgpt", label: "ChatGPT / Claude (Teams)", sub: "Productivity layer" },
   { key: "librechat", label: "LibreChat", sub: "Open AI interface layer" },
   { key: "neuralops", label: "NeuralOps Nexus", sub: "Coordination layer", highlight: true },
-] as const;
+];
 
 type Row = {
   category: string;
@@ -133,7 +133,7 @@ export const Comparison = () => {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {rows.map((row, i) => (
+              {rows.map((row) => (
                 <TableRow key={row.category} className="border-hairline/40">
                   <TableCell className="bg-muted/20 align-top text-sm font-medium text-foreground">
                     {row.category}
