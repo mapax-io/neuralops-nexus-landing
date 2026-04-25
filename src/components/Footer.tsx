@@ -27,7 +27,7 @@ export const Footer = () => {
           <div className="md:col-span-4">
             <LogoLockup />
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-              The operating system for AI-driven teams. Coordinate humans, agents, and knowledge in one place.
+              The operating system for AI-driven teams. Coordinate humans, agents, and knowledge — synced.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8 md:col-span-8 md:grid-cols-4">
