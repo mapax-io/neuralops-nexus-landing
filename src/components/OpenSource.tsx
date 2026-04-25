@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Github, GitBranch, Star } from "lucide-react";
 
+const GITHUB_URL = "https://github.com/mapax-io/neuralops-nexus-backend";
+
 export const OpenSource = () => {
   return (
     <section id="open-source" className="relative py-24 md:py-32">
@@ -32,12 +34,16 @@ export const OpenSource = () => {
                 or let us run it for you with enterprise features and support.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button variant="brand" size="lg">
-                  <Github className="h-4 w-4" />
-                  Star on GitHub
+                <Button variant="brand" size="lg" asChild>
+                  <a href={GITHUB_URL} target="_blank" rel="noreferrer noopener">
+                    <Github className="h-4 w-4" />
+                    Star on GitHub
+                  </a>
                 </Button>
-                <Button variant="glass" size="lg">
-                  Read the docs
+                <Button variant="glass" size="lg" asChild>
+                  <a href={GITHUB_URL} target="_blank" rel="noreferrer noopener">
+                    Browse the repo
+                  </a>
                 </Button>
               </div>
             </div>
@@ -47,16 +53,16 @@ export const OpenSource = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-sm">
                   <Github className="h-4 w-4 text-muted-foreground" />
-                  <span className="text-muted-foreground">neuralops/</span>
-                  <span className="font-medium text-foreground">nexus</span>
+                  <span className="text-muted-foreground">mapax-io/</span>
+                  <span className="font-medium text-foreground">neuralops-nexus-backend</span>
                 </div>
                 <span className="rounded-md border border-hairline bg-surface px-2 py-0.5 text-[10px] uppercase tracking-wider text-muted-foreground">
-                  Apache-2.0
+                  Open Source
                 </span>
               </div>
               <p className="mt-3 text-sm text-muted-foreground">
-                The orchestration core for AI-driven teams. Agents, memory, tools, and workflows — composable and
-                observable.
+                The orchestration core for the Human–AI digital workforce. Personas, agents, memory, tools and
+                shared workflows — composable and observable.
               </p>
               <div className="mt-5 flex items-center gap-5 text-xs text-muted-foreground">
                 <span className="inline-flex items-center gap-1.5">
