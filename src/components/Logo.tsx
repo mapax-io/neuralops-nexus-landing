@@ -74,7 +74,7 @@ export const Logo = ({ className, size = 32 }: LogoProps) => {
 };
 
 export const LogoLockup = ({ className }: { className?: string }) => (
-  <div className={`flex items-center gap-2.5 ${className ?? ""}`}>
+  <div className={`flex items-center gap-1 ${className ?? ""}`}>
     <Logo size={30} />
     <span className="text-[15px] font-semibold tracking-tight text-foreground">
       euralOPS <span className="text-muted-foreground font-normal">Nexus</span>
