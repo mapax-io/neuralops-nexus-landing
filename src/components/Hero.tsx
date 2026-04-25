@@ -22,24 +22,25 @@ export const Hero = () => {
         {/* Eyebrow */}
         <div className="mx-auto mb-8 flex w-fit items-center gap-2 rounded-full border border-hairline bg-surface/60 px-3.5 py-1.5 text-xs text-muted-foreground backdrop-blur animate-fade-up">
           <Sparkles className="h-3.5 w-3.5 text-primary" />
-          <span>Now in private beta — join the waitlist</span>
+          <span>Open source · Now in private beta</span>
         </div>
 
-        {/* Headline */}
+        {/* Headline / Slogan */}
         <h1
           className="mx-auto max-w-4xl text-balance text-center text-5xl font-semibold leading-[1.05] tracking-tighter text-foreground md:text-7xl animate-fade-up"
           style={{ animationDelay: "60ms" }}
         >
-          The <span className="text-gradient-brand">Operating System</span> for AI-Driven Teams
+          Orchestrating the{" "}
+          <span className="text-gradient-brand">Human–AI Digital Workforce</span>
         </h1>
 
-        {/* Subhead */}
+        {/* Vision */}
         <p
           className="mx-auto mt-6 max-w-2xl text-center text-lg leading-relaxed text-muted-foreground md:text-xl animate-fade-up"
           style={{ animationDelay: "120ms" }}
         >
-          Coordinate humans, AI agents, and knowledge in one unified platform — built for teams who treat AI as
-          critical infrastructure.
+          A unified workspace where Humans, AI Personas, and Autonomous Agents collaborate on complex
+          problems through a single, shared reality.
         </p>
 
         {/* CTAs */}
@@ -51,8 +52,11 @@ export const Hero = () => {
             Get early access
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Button>
-          <Button variant="glass" size="lg">
-            View demo
+          <Button variant="glass" size="lg" asChild>
+            <a href={GITHUB_URL} target="_blank" rel="noreferrer noopener">
+              <Github className="h-4 w-4" />
+              View on GitHub
+            </a>
           </Button>
         </div>
 
