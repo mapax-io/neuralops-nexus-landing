@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Github, GitBranch, Star } from "lucide-react";
 
+const GITHUB_URL = "https://github.com/mapax-io/neuralops-nexus-backend";
+
 export const OpenSource = () => {
   return (
     <section id="open-source" className="relative py-24 md:py-32">
