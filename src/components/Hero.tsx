@@ -39,8 +39,8 @@ export const Hero = () => {
           className="mx-auto mt-6 max-w-2xl text-center text-lg leading-relaxed text-muted-foreground md:text-xl animate-fade-up"
           style={{ animationDelay: "120ms" }}
         >
-          A unified workspace where Humans, AI Personas, and Autonomous Agents collaborate on complex
-          problems through a single, shared reality.
+          A unified workspace where humans, AI personas, and autonomous agents collaborate on
+          complex problems through a single, shared reality — one platform, one source of truth.
         </p>
 
         {/* CTAs */}
