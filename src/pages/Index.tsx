@@ -5,6 +5,7 @@ import { Comparison } from "@/components/Comparison";
 import { Market } from "@/components/Market";
 import { BusinessModel } from "@/components/BusinessModel";
 import { ProductStatus } from "@/components/ProductStatus";
+import { GoToMarket } from "@/components/GoToMarket";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
