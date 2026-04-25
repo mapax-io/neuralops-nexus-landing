@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { LogoLockup } from "./Logo";
-import { Menu, X, Github, BookOpen, GitCompare } from "lucide-react";
+import { Menu, X, Github, BookOpen } from "lucide-react";
 
 const GITHUB_URL = "https://github.com/mapax-io/neuralops-nexus-backend";
 const DOCS_URL = "https://docs.lovable.dev";
