@@ -31,8 +31,8 @@ export const Logo = ({ className, size = 32 }: LogoProps) => {
           <stop offset="100%" stopColor="hsl(189 94% 53%)" />
         </linearGradient>
         <linearGradient id={ringId} x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="hsl(217 91% 60%)" stopOpacity="0.9" />
-          <stop offset="100%" stopColor="hsl(258 90% 66%)" stopOpacity="0.5" />
+          <stop offset="0%" stopColor="hsl(217 91% 70%)" stopOpacity="1" />
+          <stop offset="100%" stopColor="hsl(258 90% 75%)" stopOpacity="0.85" />
         </linearGradient>
         <radialGradient id={glowId} cx="50%" cy="50%" r="50%">
           <stop offset="0%" stopColor="hsl(217 91% 60%)" stopOpacity="0.45" />
@@ -44,10 +44,10 @@ export const Logo = ({ className, size = 32 }: LogoProps) => {
       <circle cx="24" cy="24" r="20" fill={`url(#${glowId})`} />
 
       {/* Three elliptical orbits — rotated to feel volumetric / AR */}
-      <g stroke={`url(#${ringId})`} strokeWidth="1.1" fill="none" strokeLinecap="round">
-        <ellipse cx="24" cy="24" rx="20" ry="7.5" transform="rotate(-25 24 24)" opacity="0.85" />
-        <ellipse cx="24" cy="24" rx="20" ry="7.5" transform="rotate(25 24 24)" opacity="0.7" />
-        <ellipse cx="24" cy="24" rx="20" ry="7.5" transform="rotate(90 24 24)" opacity="0.55" />
+      <g stroke={`url(#${ringId})`} strokeWidth="1.4" fill="none" strokeLinecap="round">
+        <ellipse cx="24" cy="24" rx="20" ry="7.5" transform="rotate(-25 24 24)" opacity="0.95" />
+        <ellipse cx="24" cy="24" rx="20" ry="7.5" transform="rotate(25 24 24)" opacity="0.9" />
+        <ellipse cx="24" cy="24" rx="20" ry="7.5" transform="rotate(90 24 24)" opacity="0.85" />
       </g>
 
       {/* Orbital nodes */}
@@ -77,7 +77,7 @@ export const LogoLockup = ({ className }: { className?: string }) => (
   <div className={`flex items-center gap-2.5 ${className ?? ""}`}>
     <Logo size={30} />
     <span className="text-[15px] font-semibold tracking-tight text-foreground">
-      NeuralOps <span className="text-muted-foreground font-normal">Nexus</span>
+      euralOPS <span className="text-muted-foreground font-normal">Nexus</span>
     </span>
   </div>
 );
