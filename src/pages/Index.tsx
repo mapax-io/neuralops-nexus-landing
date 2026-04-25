@@ -4,6 +4,7 @@ import { Features } from "@/components/Features";
 import { Comparison } from "@/components/Comparison";
 import { Market } from "@/components/Market";
 import { BusinessModel } from "@/components/BusinessModel";
+import { ProductStatus } from "@/components/ProductStatus";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -16,6 +17,7 @@ const Index = () => {
         <Comparison />
         <Market />
         <BusinessModel />
+        <ProductStatus />
       </main>
       <Footer />
     </div>
