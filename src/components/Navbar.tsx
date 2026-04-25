@@ -71,7 +71,12 @@ export const Navbar = () => {
               </a>
             ))}
             <div className="mt-2 flex flex-col gap-2 px-3">
-              <Button variant="ghost" size="sm">Sign in</Button>
+              <Button variant="ghost" size="sm" asChild>
+                <a href={GITHUB_URL} target="_blank" rel="noreferrer noopener">
+                  <Github className="h-4 w-4" />
+                  GitHub
+                </a>
+              </Button>
               <Button variant="brand" size="sm">Get early access</Button>
             </div>
           </div>
