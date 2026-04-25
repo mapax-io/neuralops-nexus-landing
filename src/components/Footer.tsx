@@ -18,7 +18,7 @@ export const Footer = () => {
               The operating system for AI-driven teams. Coordinate humans, agents, and knowledge — synced.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-8 md:col-span-8 md:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 md:col-span-8 md:grid-cols-1 md:justify-items-end">
             {cols.map((col) => (
               <div key={col.title}>
                 <div className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
