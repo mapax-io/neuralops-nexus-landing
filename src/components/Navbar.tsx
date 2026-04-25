@@ -36,8 +36,11 @@ export const Navbar = () => {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
-          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-            Sign in
+          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground" asChild>
+            <a href={GITHUB_URL} target="_blank" rel="noreferrer noopener" aria-label="GitHub repository">
+              <Github className="h-4 w-4" />
+              GitHub
+            </a>
           </Button>
           <Button variant="brand" size="sm">
             Get early access
