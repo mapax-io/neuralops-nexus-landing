@@ -12,9 +12,9 @@ export const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-hairline/60 bg-background/70 backdrop-blur-xl">
       <div className="container-narrow flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center" aria-label="NeuralOps Nexus home">
+        <a href="#" className="flex items-center" aria-label="NeuralOps Nexus home">
           <LogoLockup />
-        </Link>
+        </a>
 
         <div className="hidden items-center gap-3 md:flex">
           <span className="inline-flex items-center gap-2 rounded-full border border-hairline/60 bg-muted/40 px-3 py-1 text-xs text-muted-foreground">
@@ -24,12 +24,6 @@ export const Navbar = () => {
             </span>
             MVP in development
           </span>
-          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground" asChild>
-            <Link to="/comparison" aria-label="Comparison">
-              <GitCompare className="h-4 w-4" />
-              Comparison
-            </Link>
-          </Button>
           <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground" asChild>
             <a href={DOCS_URL} target="_blank" rel="noreferrer noopener" aria-label="Documentation">
               <BookOpen className="h-4 w-4" />
@@ -64,12 +58,6 @@ export const Navbar = () => {
               </span>
               MVP in development
             </span>
-            <Button variant="ghost" size="sm" asChild onClick={() => setOpen(false)}>
-              <Link to="/comparison">
-                <GitCompare className="h-4 w-4" />
-                Comparison
-              </Link>
-            </Button>
             <Button variant="ghost" size="sm" asChild onClick={() => setOpen(false)}>
               <a href={DOCS_URL} target="_blank" rel="noreferrer noopener">
                 <BookOpen className="h-4 w-4" />
