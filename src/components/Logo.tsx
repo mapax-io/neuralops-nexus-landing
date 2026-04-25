@@ -55,8 +55,8 @@ export const Logo = ({ className, size = 32 }: LogoProps) => {
       <circle cx="6" cy="34" r="1.6" fill="hsl(258 90% 66%)" />
       <circle cx="24" cy="4.5" r="1.4" fill="hsl(217 91% 60%)" />
 
-      {/* Geometric "N" at the core — brighter cyan/white to pop against orbits */}
-      <g stroke="hsl(189 94% 70%)" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" fill="none" filter="url(#glow)">
+      {/* Geometric "N" at the core — bright white/cyan to pop against orbits */}
+      <g stroke="hsl(195 100% 85%)" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
         {/* Left vertical */}
         <line x1="15" y1="34" x2="15" y2="14" />
         {/* Diagonal */}
@@ -66,9 +66,9 @@ export const Logo = ({ className, size = 32 }: LogoProps) => {
       </g>
 
       {/* Core nodes on the N — brighter */}
-      <circle cx="15" cy="14" r="2.2" fill="hsl(189 94% 75%)" />
-      <circle cx="33" cy="34" r="2.2" fill="hsl(217 91% 80%)" />
-      <circle cx="24" cy="24" r="1.8" fill="hsl(258 90% 75%)" />
+      <circle cx="15" cy="14" r="2.4" fill="hsl(195 100% 90%)" />
+      <circle cx="33" cy="34" r="2.4" fill="hsl(195 100% 90%)" />
+      <circle cx="24" cy="24" r="2" fill="hsl(195 100% 85%)" />
     </svg>
   );
 };
