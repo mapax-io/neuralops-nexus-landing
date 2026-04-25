@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Github } from "lucide-react";
+import { Sparkles, Github } from "lucide-react";
 import { Logo } from "./Logo";
 
 const GITHUB_URL = "https://github.com/mapax-io/neuralops-nexus-backend";
@@ -48,10 +48,6 @@ export const Hero = () => {
           className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row animate-fade-up"
           style={{ animationDelay: "180ms" }}
         >
-          <Button variant="brand" size="lg" className="group">
-            Get early access
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </Button>
           <Button variant="glass" size="lg" asChild>
             <a href={GITHUB_URL} target="_blank" rel="noreferrer noopener">
               <Github className="h-4 w-4" />
