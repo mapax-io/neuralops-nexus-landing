@@ -4,7 +4,7 @@ import { LogoLockup } from "./Logo";
 import { Menu, X, Github, BookOpen } from "lucide-react";
 
 const GITHUB_URL = "https://github.com/mapax-io/neuralops-nexus-backend";
-const DOCS_URL = "https://docs.lovable.dev";
+const DOCS_URL = "https://github.com/mapax-io/neuralops-nexus-backend/blob/dev/readme.md";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
